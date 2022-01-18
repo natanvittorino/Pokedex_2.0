@@ -18,6 +18,8 @@ export class PokemonDetail {
     }
 }
 
+// #########################################
+// SUPPORT CLASSES
 class Ability {
     ability!: {
         name: string;
