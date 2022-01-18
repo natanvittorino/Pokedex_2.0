@@ -1,14 +1,19 @@
+// SERVICES (PROVIDERS)
+import { PokemonService } from './services/pokemon.service';
+// MODULES(IMPORTS)
 import { SharedModule } from './shared/shared.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule} from '@angular/common/http';
 import { MaterialModule } from './material.module';
-
-import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
+// COMPONENTS(DECLARATIONS)
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from '@angular/forms';
+// COMPONENTS(BOOTSTRAP)
+import { AppComponent } from './app.component';
+
 
 
 @NgModule({
@@ -23,11 +28,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     SharedModule,
     HttpClientModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
     
   
   ],
-  providers: [],
+  providers: [PokemonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
