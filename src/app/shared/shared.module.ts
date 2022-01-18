@@ -10,6 +10,9 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    ProgressBarComponent
   ]
 })
 export class SharedModule { }
